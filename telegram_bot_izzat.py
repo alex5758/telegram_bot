@@ -12,7 +12,7 @@ def start(message):
 
     # 1️⃣ Inline-кнопка на сайт
     inline = types.InlineKeyboardMarkup()
-    btn_site = types.InlineKeyboardButton(text='Наш сайт', url='https://google.com')
+    btn_site = types.InlineKeyboardButton(text='Поисковик', url='https://google.com')
     inline.add(btn_site)
     bot.send_message(chat_id, "По кнопке ниже можно перейти на сайт Google:", reply_markup=inline)
 
