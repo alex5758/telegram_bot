@@ -1,6 +1,6 @@
 import telebot
 from telebot import types
-bot = telebot.TeleBot('8627447114:AAG8j7OIC70fx3mm1zc5RmMOarWSbfxaN9U')
+bot = telebot.TeleBot(os.getenv("BOT_TOKEN"))
 @bot.message_handler(commands = ['start'])
 def url(message):
 	markup = types.InlineKeyboardMarkup()
