@@ -11,9 +11,9 @@ def start(message):
 
     # Inline кнопка на сайт
     inline = types.InlineKeyboardMarkup()
-    btn_site = types.InlineKeyboardButton(text='Наш сайт', url='https://habr.com/ru/all/')
+    btn_site = types.InlineKeyboardButton(text='Поисковик', url='https://google.com')
     inline.add(btn_site)
-    bot.send_message(chat_id, "По кнопке ниже можно перейти на сайт Хабра:", reply_markup=inline)
+    bot.send_message(chat_id, "По кнопке ниже можно перейти на сайт Google:", reply_markup=inline)
 
     # Выбор языка
     markup_lang = types.ReplyKeyboardMarkup(resize_keyboard=True)
