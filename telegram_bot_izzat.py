@@ -1,4 +1,4 @@
-import os
+import 
 import telebot
 from telebot import types
 
