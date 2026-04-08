@@ -5,30 +5,25 @@ bot = telebot.TeleBot(os.getenv("BOT_TOKEN"))
 @bot.message_handler(commands = ['start'])
 def url(message):
 	markup = types.InlineKeyboardMarkup()
-	btn1 = types.InlineKeyboardButton(text = 'the website', url = 'website2-production-b437.up.railway.app')
+	btn1 = types.InlineKeyboardButton(text = 'the website', url = 'https://website2-production-b437.up.railway.app')
 	markup.add(btn1)
 	bot.send_message(message.from_user.id, "by clicking you can go to the website", reply_markup = markup)
-	markub_lang = types.ReplyKeyboardMarkup(resize_keyboard = True)
+	markup_lang = types.ReplyKeyboardMarkup(resize_keyboard = True)
 	btn1 = types.KeyboardButton("english")
 	markup_lang.add(btn1)
-	bot.send_message(chat_id, "choose your language", reply_markup = markup_lang)
+	bot.send_message(message.chat.id, "choose your language", reply_markup = markup_lang)
 
 
-
-
-@bot.message_handler(commands = ['start'])
 def start(message):
 	markup = types.ReplyKeyboardMarkup(resize_keyboard = True)
 	btn1 = types.KeyboardButton("english")
 	markup.add(btn1)
 	bot.send_message(message.from_user.id, "choose your language", reply_markup = markup)
-@bot.message_handler(commands = ['start'])
 def start(message):
 	markup = types.ReplyKeyboardMarkup(resize_keyboard = True)
 	btn1 = types.KeyboardButton("greeting")
 	markup.add(btn1)
 	bot.send_message(message.from_user.id, "hi im your bot helper", reply_markup = markup)
-@bot.message_handler(content_types = ['text'])
 def get_text_messages(message):
 	if message.text == 'greeting':
 		markup = types.ReplyKeyboardMarkup(resize_keyboard = True)
